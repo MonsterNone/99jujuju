@@ -14,7 +14,7 @@ var miao;
 function findTask() {
     let temp = images.read("task.JPG");
     let p = findImage(captureScreen(), temp, {
-        region: [width * 0.75, height * 0.75], //搜索区域
+        //region: [width * 0.75, height * 0.75], //搜索区域
         threshold: 0.8
     });
     if (p) {
@@ -44,7 +44,7 @@ function checkTask() {
 function findShop() {
     let temp = images.read("go.JPG");
     let p = findImage(captureScreen(), temp, {
-        region: [width * 0.75, height * 0.3], //搜索区域
+        //region: [width * 0.75, height * 0.3], //搜索区域
         threshold: 0.8
     });
     if (p) {
@@ -74,7 +74,7 @@ function checkShop() {
 function findMiao() {
     let temp = images.read("miao.JPG");
     let p = findImage(captureScreen(), temp, {
-        region: [width * 0.75, height * 0.5], //搜索区域
+        //region: [width * 0.75, height * 0.5], //搜索区域
         threshold: 0.8
     });
     if (p) {
