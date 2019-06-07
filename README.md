@@ -5,7 +5,7 @@
 ## 概述
 自动刷完50个店铺的猫币，利用图像识别确定点击
 
-暂未测试兼容性，如果有兼容性问题大概率是图像识别的区域问题。可以自己修改或者提交issue，注明手机分辨率并上传无法找到入口的界面截图。
+暂未测试兼容性，出现问题可提交issue，请注明手机分辨率并务必！！！上传无法找到入口的界面截图。
 
 ## 使用方法
 1. 首先安装Auto.js(安卓)https://github.com/MonsterNone/auto-taobao.js/raw/master/4.1.1a%20Alpha2-armeabi-v7a-release.apk
