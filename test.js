@@ -36,8 +36,7 @@ function checkTask() {
         //  toast("找到啦:" + p);
         return true;
     } else {
-        alert("任务入口不存在");
-        exit();
+        return false;
     }
 }
 
@@ -66,8 +65,7 @@ function checkShop() {
         // toast("找到啦:" + p);
         return true;
     } else {
-        alert("店铺入口不存在");
-        exit();
+        return false;
     }
 }
 
@@ -96,37 +94,66 @@ function checkMiao() {
         // toast("找到啦:" + p);
         return true;
     } else {
-        toast("猫币入口不存在");
         return false;
     }
 }
 
 function loopMain() {
+    var flag;
+
     if (!task) {
         findTask();
     }
-    if (checkTask()) {
-        click(task[0], task[1]);
-        sleep(1500);
+    flag = false;
+    for (let j = 0; j < 5; j++) {
+        flag = checkTask();
+        if (flag) {
+            click(task[0], task[1]);
+            break;
+        }
+        sleep(200 * j);
     }
-    
+    if (!flag) {
+        alert("任务入口不存在");
+        exit();
+    }
+
     if (!shop) {
+        sleep(1500);
         findShop();
     }
-    if (checkShop()) {
-        click(shop[0], shop[1]);
-        sleep(1500);
+    flag = false;
+    for (let j = 0; j < 5; j++) {
+        flag = checkShop();
+        if (flag) {
+            click(shop[0], shop[1]);
+            break;
+        }
+        sleep(200 * j);
     }
-    
-    sleep(15000);
+    if (!flag) {
+        alert("店铺入口不存在");
+        exit();
+    }
+
+    sleep(10000);
 
     if (!miao) {
+        sleep(6000);
         findMiao();
     }
-    
-    if (checkMiao()) {
-        click(miao[0], miao[1]);
-        sleep(1500);
+    flag = false;
+    for (let j = 0; j < 5; j++) {
+        flag = checkMiao();
+        if (flag) {
+            click(miao[0], miao[1]);
+            sleep(500);
+            break;
+        }
+        sleep(400 * j);
+    }
+    if (!flag) {
+        toast("猫币入口不存在");
     }
 
     /*
@@ -145,10 +172,9 @@ function loopMain() {
         }
     */
     back();
-    sleep(1500);
 }
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 40; i++) {
     toast("第" + (i + 1) + "个店铺");
     loopMain();
 }
