@@ -2,6 +2,10 @@
 利用Auto.js刷天猫618猫币
 > 目前只包含店铺猫币
 
+# 重要！！！
+
+由于6.11日天猫修改了逛店入口，v1.0.x版本脚本失效！保留v0.0.x的脚本(fallback.js)，具体使用方法见https://github.com/MonsterNone/618-miao/tree/9027f6db33d5fd165122c9a92983df743cc3e0ac
+
 ## 概述
 自动刷完40个店铺的猫币，利用图像识别确定点击
 
