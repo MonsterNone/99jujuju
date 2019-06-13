@@ -15,7 +15,7 @@ function findTask() {
     let temp = images.read("task.JPG");
     let p = findImage(captureScreen(), temp, {
         //region: [width * 0.75, height * 0.75], //搜索区域
-        threshold: 0.8
+        threshold: 0.6
     });
     if (p) {
         //  toast("找到啦:" + p);
@@ -44,13 +44,13 @@ function findShop() {
     let temp = images.read("go.JPG");
     let p = findImage(captureScreen(), temp, {
         //region: [width * 0.75, height * 0.3], //搜索区域
-        threshold: 0.8
+        threshold: 0.6
     });
     if (p) {
         // toast("找到啦:" + p);
         shop = [p.x, p.y];
     } else {
-        alert("没找到店铺入口(初始化)");
+        alert("没找到逛店入口(初始化)");
         exit();
     }
 }
