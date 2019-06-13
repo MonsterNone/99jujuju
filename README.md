@@ -20,6 +20,9 @@
 偶尔会出现店铺没有喵币可领或者图像识别失败问题，重新运行或者手动将剩下的两三个店铺点完即可。
 
 ## 使用方法
+
+[视频教程](https://www.bilibili.com/video/av54683875/)
+
 1. 首先安装Auto.js(安卓)https://github.com/MonsterNone/auto-taobao.js/raw/master/4.1.1a%20Alpha2-armeabi-v7a-release.apk
 2. 下载脚本https://github.com/MonsterNone/618-miao/archive/master.zip
 3. 解压脚本至手机储存中的 脚本 文件夹(将所有文件放在一个新的文件夹里，类似于 脚本/618-miao)
@@ -28,6 +31,12 @@
 6. 打开淘宝，点击进入猫猫合成活动界面
 7. 脚本执行期间不要滑动！！！
 8. 点击Auto.js的悬浮窗，在文件夹中找到test.js，运行
+
+### 其他说明
+
+v1.0.5的时候修改了等待(sleep)的方式，当时使用手机修改的，懒惰得直接复制粘贴了，导致代码中有一堆相似重复的函数23333。
+
+本来想重构，不过活动还有几天就结束了重构也~~没意思~~懒。
 
 ### 版本
 v1.0.6 修改逛店入口（通过合合卡）
